@@ -6,6 +6,7 @@ import java.time.LocalDateTime
 @Entity
 @Table(name = "Sigungu")
 class Sigungu(
+    @Id val pidLocCode: Long,
     level: Int,
     depth1: String,
     depth2: String = "none",
@@ -15,10 +16,6 @@ class Sigungu(
     rbLng: Double,
     rbLat: Double
 ) {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var pidLocCode: Long? = null
-
     @Column(nullable = false)
     var level: Int = level
         private set
