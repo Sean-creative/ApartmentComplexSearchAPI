@@ -30,6 +30,11 @@ dependencies {
     implementation("mysql:mysql-connector-java:8.0.33")
     //Open API 호출을 위해..
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
+
+    testImplementation("io.mockk:mockk:1.12.0")
+    // MockK coroutine support
+    testImplementation("io.mockk:mockk-agent-jvm:1.12.0")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.5.2")
 }
 
 tasks.withType<KotlinCompile> {
