@@ -6,11 +6,11 @@ import jakarta.persistence.*
 @Entity
 @Table(name = "user")
 class User(
-    name:String,
+    user:String,
     password:String
 ) : BaseEntity() {
     @Column(nullable = false)
-    var name: String = name
+    var user: String = user
         private set
 
     @Column(nullable = false)
