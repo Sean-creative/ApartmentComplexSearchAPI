@@ -15,11 +15,11 @@ class SigunguServiceTest {
     private val sigunguService = SigunguService(sigunguRepository)
 
     @Test
-    fun `Given pidLocCode, when getSigunguByPidLocCode called, then return list of Sigungu`() = runBlocking {
+    fun `Given pidLocCode return Sigungu list`() = runBlocking {
         // Given
         val pidLocCode = 1111000000L
         val expectedSigunguList = listOf(
-            Sigungu(pidLocCode, 2, "서울특별시", "종로구", "none", 126.948899, 37.56582, 127.023365, 37.632375, LocalDateTime.now())
+            Sigungu(2, "서울특별시", "종로구", "none", 126.948899, 37.56582, 127.023365, 37.632375)
         )
         coEvery { sigunguRepository.findByPidLocCode(pidLocCode) } returns expectedSigunguList
 
