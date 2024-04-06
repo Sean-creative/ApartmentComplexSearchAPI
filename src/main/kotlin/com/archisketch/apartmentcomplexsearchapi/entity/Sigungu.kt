@@ -4,7 +4,7 @@ import jakarta.persistence.*
 import java.time.LocalDateTime
 
 @Entity
-@Table(name = "Sigungu")
+@Table(name = "sigungu")
 class Sigungu(
     @Id val pidLocCode: Long,
     level: Int,
