@@ -1,0 +1,206 @@
+{
+	"info": {
+		"_postman_id": "ce29c3bb-e411-47c7-b64d-c3f187f27934",
+		"name": "archisketch",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22815767"
+	},
+	"item": [
+		{
+			"name": "1. 단순 Response API 개발 - health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Open API 조회 개발 - cylinder",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cylinder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cylinder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. 조회 API 개발 - sigungu",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/sigungu?pidLocCode=1111000000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sigungu"
+					],
+					"query": [
+						{
+							"key": "pidLocCode",
+							"value": "1111000000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. 데이터 저장 API 개발 - /cylinder/info",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"user\": \"test\",\r\n \"password\": \"test12342\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cylinder/info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cylinder",
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. 데이터 구조화 및 API 개발 - name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/apartment-complexes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"apartment-complexes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. 데이터 구조화 및 API 개발 - road-address",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/road-address/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"road-address",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. 데이터 구조화 및 API 개발 - jibun-address",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/jibun-address/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"jibun-address",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. 데이터 구조화 및 API 개발 - floor-plans",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"고덕아르테온\",\r\n    \"type\" : \"112A\",\r\n    \"isExpanded\" : false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/apartment-complexes/floor-plans",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"apartment-complexes",
+						"floor-plans"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
