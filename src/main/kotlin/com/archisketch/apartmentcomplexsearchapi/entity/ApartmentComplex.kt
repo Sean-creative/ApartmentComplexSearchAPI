@@ -17,13 +17,4 @@ class ApartmentComplex(
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "apartmentComplex", cascade = [CascadeType.ALL], orphanRemoval = true)
     val floorPlans: MutableSet<FloorPlan> = mutableSetOf()
-
-    fun addAddress(address: Address) {
-        addresses.add(address)
-        address.setApartmentComplex(this)
-    }
-    fun addFloorPlan(floorPlan: FloorPlan) {
-        floorPlans.add(floorPlan)
-        floorPlan.setApartmentComplex(this)
-    }
 }

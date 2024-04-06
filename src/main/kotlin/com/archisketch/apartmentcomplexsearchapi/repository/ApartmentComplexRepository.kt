@@ -9,5 +9,7 @@ import org.springframework.stereotype.Repository
 
 @Repository
 interface ApartmentComplexRepository : JpaRepository<ApartmentComplex, Long>, JpaSpecificationExecutor<ApartmentComplex> {
-
+    fun findByName(name: String): ApartmentComplex?
+    fun findByAddressesRoadAddress(roadAddress: String): List<ApartmentComplex>
+    fun findByAddressesJibunAddress(jibunAddress: String): List<ApartmentComplex>
 }

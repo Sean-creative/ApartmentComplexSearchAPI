@@ -1,0 +1,19 @@
+
+spring:
+  application:
+    name: apartment-complex-search-api
+
+  datasource:
+    url: jdbc:mysql://backend-test.ctvcd5flkzua.ap-northeast-2.rds.amazonaws.com:3306/test1
+    username: test01
+    password:  test01-d3r2
+
+  jpa:
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+
+logging:
+  level:
+    root=DEBUG:
