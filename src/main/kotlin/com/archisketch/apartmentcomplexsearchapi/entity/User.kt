@@ -9,7 +9,7 @@ class User(
     user:String,
     password:String
 ) : BaseEntity() {
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     var user: String = user
         private set
 
