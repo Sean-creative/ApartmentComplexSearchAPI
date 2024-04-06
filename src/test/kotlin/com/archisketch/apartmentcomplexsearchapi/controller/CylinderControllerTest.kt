@@ -45,7 +45,7 @@ class CylinderControllerTest {
     }
 
     @Test
-    fun `saveUserInfo save user and returns message`() {
+    fun `saveUserInfo returns message`() {
         // Given
         val userInfoDto = UserInfoDto(name = "Test User", password = "password123")
         val savedUser = User( name = "Test User", password = "password123")

@@ -18,7 +18,7 @@ class HealthCheckControllerTest {
     private lateinit var mockMvc: MockMvc
 
     @Test
-    fun `Given health endpoint, when GET request, then return 1`() {
+    fun `Given health endpoint then return 1`() {
         // given
         val endpoint = "/health"
 

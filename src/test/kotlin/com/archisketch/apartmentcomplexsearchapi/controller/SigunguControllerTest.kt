@@ -19,7 +19,7 @@ class SigunguControllerTest(@Autowired private val mockMvc: MockMvc) {
     private lateinit var sigunguService: SigunguService
 
     @Test
-    fun `Given pidLocCode, when GET request to sigungu, then return list of Sigungu as JSON`() {
+    fun `Given pidLocCode return JSON`() {
         // Given
         val pidLocCode: Long = 1111000000
         val mockSigunguList = listOf(
