@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.*
 @RestController
 @RequestMapping("/cylinder")
 class CylinderController(private val cylinderService: CylinderService, @Autowired private val userService: UserService) {
-    @GetMapping("/")
+
+    @GetMapping
     fun getCylinder(): ResponseEntity<Map<String, Any>> {
         return ResponseEntity.ok(cylinderService.fetchCylinderData())
     }
