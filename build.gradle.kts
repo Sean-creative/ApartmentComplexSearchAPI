@@ -28,13 +28,18 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 
     implementation("mysql:mysql-connector-java:8.0.33")
-    //Open API 호출을 위해..
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
 
-    testImplementation("io.mockk:mockk:1.12.0")
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
     // MockK coroutine support
     testImplementation("io.mockk:mockk-agent-jvm:1.12.0")
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.5.2")
+
+    testImplementation ("com.h2database:h2:1.4.200")
+    implementation ("org.springframework.boot:spring-boot-starter-security")
+    implementation ("org.springframework.boot:spring-boot-starter-validation")
+
 }
 
 tasks.withType<KotlinCompile> {
